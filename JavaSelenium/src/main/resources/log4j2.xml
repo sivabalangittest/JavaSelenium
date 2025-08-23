@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+  <!-- Optional: centralize a few values -->
+  <Properties>
+    <Property name="LOG_DIR">logs</Property>
+    <Property name="LOG_FILE">${LOG_DIR}/application.log</Property>
+    <Property name="MAX_SIZE">10 MB</Property>
+    <Property name="MAX_FILES">10</Property>
+  </Properties>
+
+  <Appenders>
+
+    <!-- Console appender -->
+    <Console name="Console" target="SYSTEM_OUT">
+      <!-- %F (log4j 1.x) ≈ %C (class) in Log4j2; keeping %L for line -->
+      <PatternLayout pattern="%d{MM-dd-yyyy HH:mm:ss} %C %-5p [%t] %c{2} %L - %m%n"/>
+    </Console>
+
+    <!-- Rolling file appender -->
+    <RollingFile name="FileLogger"
+                 fileName="${LOG_FILE}"
+                 filePattern="${LOG_DIR}/application-%d{yyyy-MM-dd}-%i.log.gz"
+                 append="false">
+      <PatternLayout pattern="%d{ISO8601} %5p [%t] %c{1}:%L - %m%n"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="${MAX_SIZE}"/>
+        <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+      </Policies>
+      <DefaultRolloverStrategy max="${MAX_FILES}"/>
+    </RollingFile>
+
+  </Appenders>
+
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="FileLogger"/>
+    </Root>
+  </Loggers>
+
+</Configuration>

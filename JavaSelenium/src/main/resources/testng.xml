@@ -1,0 +1,14 @@
+<suite name="AutomationSuite" parallel="false">
+
+    <listeners>
+        <listener class-name="ExtentReportListener.ExtentReportListener" />
+    </listeners>
+
+    <test name="Regression Tests">
+        <classes>
+            <class name="Selenium.LaunchChrome"/>
+            <class name="Selenium.MouseMovement"/>
+        </classes>
+    </test>
+
+</suite>
