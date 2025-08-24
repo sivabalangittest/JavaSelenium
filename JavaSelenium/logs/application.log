@@ -1,1 +1,7 @@
-2025-08-22T20:44:17,110  INFO [main] LaunchChrome:22 - Chrome Browser Launched
+2025-08-23T20:23:13,658  INFO [main] LaunchChrome:22 - Chrome Browser Launched
+2025-08-23T20:23:43,307  INFO [main] ExtentReportListener:51 - ===== Test Execution Started =====
+2025-08-23T20:23:43,315  INFO [main] ExtentReportListener:94 - Test validateTitle Pass
+2025-08-23T20:23:43,317  INFO [main] ExtentReportListener:94 - Test dragDrop Pass
+2025-08-23T20:23:43,317  INFO [main] ExtentReportListener:94 - Test mouseHover Pass
+2025-08-23T20:23:43,536  INFO [main] ExtentReportListener:66 - ===== Test Execution Finished =====
+2025-08-23T20:23:43,546  INFO [main] ExtentReportListener:67 - Extent report generated at: /Users/sivabalan/git/JavaSelenium/JavaSelenium/test-output/ExtentReport.html

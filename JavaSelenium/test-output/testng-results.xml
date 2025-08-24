@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-22T20:44:15 GMT-04:00" name="Default suite" finished-at="2025-08-22T20:44:19 GMT-04:00" duration-ms="4261">
+  <suite started-at="2025-08-23T20:23:12 GMT-04:00" name="AutomationSuite" finished-at="2025-08-23T20:23:43 GMT-04:00" duration-ms="31095">
     <groups>
+      <group name="Sanity">
+        <method signature="MouseMovement.mouseHover()[pri:2, instance:Selenium.MouseMovement@665df3c6]" name="mouseHover" class="Selenium.MouseMovement"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="MouseMovement.dragDrop()[pri:1, instance:Selenium.MouseMovement@665df3c6]" name="dragDrop" class="Selenium.MouseMovement"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-08-22T20:44:15 GMT-04:00" name="Default test" finished-at="2025-08-22T20:44:19 GMT-04:00" duration-ms="4261">
+    <test started-at="2025-08-23T20:23:12 GMT-04:00" name="Regression Tests" finished-at="2025-08-23T20:23:43 GMT-04:00" duration-ms="31095">
+      <class name="Selenium.MouseMovement">
+        <test-method signature="dragDrop()[pri:1, instance:Selenium.MouseMovement@665df3c6]" started-at="2025-08-23T20:23:16 GMT-04:00" name="dragDrop" finished-at="2025-08-23T20:23:24 GMT-04:00" duration-ms="8842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dragDrop -->
+        <test-method signature="mouseHover()[pri:2, instance:Selenium.MouseMovement@665df3c6]" started-at="2025-08-23T20:23:24 GMT-04:00" name="mouseHover" finished-at="2025-08-23T20:23:43 GMT-04:00" duration-ms="18211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseHover -->
+      </class> <!-- Selenium.MouseMovement -->
       <class name="Selenium.LaunchChrome">
-        <test-method signature="validateTitle()[pri:0, instance:Selenium.LaunchChrome@2e554a3b]" started-at="2025-08-22T20:44:15 GMT-04:00" name="validateTitle" finished-at="2025-08-22T20:44:19 GMT-04:00" duration-ms="4230" status="PASS">
+        <test-method signature="validateTitle()[pri:0, instance:Selenium.LaunchChrome@478ee483]" started-at="2025-08-23T20:23:12 GMT-04:00" name="validateTitle" finished-at="2025-08-23T20:23:16 GMT-04:00" duration-ms="3999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTitle -->
       </class> <!-- Selenium.LaunchChrome -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression Tests -->
+  </suite> <!-- AutomationSuite -->
 </testng-results>
